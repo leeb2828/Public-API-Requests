@@ -155,7 +155,7 @@ function createNewElement(html_tag, text, ...attributes) {
     return new_element;
 }
 
-// So the birthday, on each employee modal window, will be in the correct format.
+// Purpose of method: The birthday on each employee modal window will be in the correct format.
 function reformat_birthdate(date) {
     let month = date.substring(5,7);
     let day = date.substring(8,10);
@@ -220,7 +220,7 @@ function add_information_to_modal_window(human) {
   method (the addEventListener for each employee gallery card).
 - Now we create all the HTML needed for the modal window, that will pop up when
   we click on an employee card.
-- Finally, we call the method that will add all the employee information
+- Finally, we call the method that will add all the employee's personal information
   to the modal window -> add_information_to_modal_window().
 */
 function create_modal_markup(employee) {
