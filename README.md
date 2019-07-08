@@ -1,5 +1,5 @@
 # <center>Public API Request</center>
-Link: https://leeb2828.github.io/Public-API-Requests/
+Link to see the Project live: https://leeb2828.github.io/Public-API-Requests/
 
 Fetch random employees using the Random User API (https://randomuser.me/), and display them in a gallery. 
 

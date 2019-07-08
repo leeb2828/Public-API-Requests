@@ -37,7 +37,7 @@ header h1 {
     margin-top: 35px;
 }
 
-/* changed border color*/
+/* Changed border color*/
 .search-input {
     padding: 0.4rem 1rem;
     border: 1px solid rgba(58, 47, 223, 0.329);
@@ -47,11 +47,12 @@ header h1 {
     outline: none;
 }
 
+/* Changed size and color of border */
 .search-input:active, .search-input:hover, .search-input:focus {
-    border: 1px solid rgba(50, 50, 50, 0.9);
+    border: 3px solid rgba(58, 47, 223, 0.329);
 }
 
-/* changed border color */
+/* Changed border color */
 .search-submit {
     cursor: pointer;
     height: 33px;
@@ -62,9 +63,10 @@ header h1 {
     outline: none;
 }
 
+/* Changed size and color of the border */
 .search-submit:active, .search-submit:hover, .search-submit:focus {
     background: rgba(255, 255, 255, 0.9);
-    border: 1px solid rgba(50, 50, 50, 0.9);
+    border: 3px solid rgba(58, 47, 223, 0.329);
 }
 
 
@@ -254,10 +256,10 @@ header h1 {
 ======================================== */
 
 @media (min-width: 1024px) {
-
+    /* Changed border size */
     .card:hover {
         background: rgba(255, 255, 255, 1);
-        border: 1px solid rgba(50, 50, 50, 0.9);
+        border: 3px solid rgba(50, 50, 50, 0.9);
     }
 
     .card:hover .card-text {
