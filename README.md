@@ -7,3 +7,5 @@ Fetch random employees using the Random User API (https://randomuser.me/), and d
 
 - If you click directly on any of the 12 employees in the gallery, a single modal window with more information about the employee you clicked on, will appear. You can use the "NEXT" and "PREV" buttons to toggle back and forth between employees when the modal window is open.
 
+- Every time you refresh the page, a different set of 12 employees will appear.
+
