@@ -12,6 +12,10 @@ const cards = document.querySelectorAll('.card');
 // created in create_gallery_markup() method
 let all_employees = [];
 
+// For the "No employees found" error message
+let no_employees_found_message_exist = false;
+let error_message;
+
 async function get_raw_data(url) {
     try {
         const response = await fetch(url);
@@ -258,16 +262,41 @@ Different employee cards will disappear or reappear.
 function hide_or_display_employees(typed_name) {
     const all_card_divs = document.getElementById('gallery');
     const people = all_card_divs.children;
+
+    let hidden_length = 0;
+    let found_length = 0;
+    let error_div = document.createElement('P');
+    error_div.setAttribute('id', 'notfound');
+
     for (let i = 0; i < people.length; i++) {
         const item = people[i];
         const name = item.querySelector('#name');
         if (name.textContent.includes(typed_name.toLowerCase())) {
             item.style.display = "";
+            found_length += 1;
         } else {
             item.style.display = "none";
+            hidden_length += 1;
+        }
+    } 
+
+    if (hidden_length === 12 && found_length === 0) {
+        if (!no_employees_found_message_exist) {
+            let html = `No employees found!`;
+            error_div.innerHTML = html;
+            gallery.insertAdjacentElement("afterend", error_div);
+            no_employees_found_message_exist = true;
+        }
+    } else if (found_length >= 1) {
+        if (no_employees_found_message_exist) {
+            error_message = document.getElementById('notfound');
+            document.body.removeChild(error_message);
+            no_employees_found_message_exist = false;
         }
     }
+         
 }
+
 
 /************************
    Program starts here 
